@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.15145631067961166" orientation="VERTICAL" prefHeight="1080.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dhahn.dhsolarverwaltung.client.gui.MainViewController">
+    <items>
+      <GridPane maxHeight="150.0" minHeight="80.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="288.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblElectricitySalesTxt" prefHeight="40.0" prefWidth="200.0" text="Stromerlös letzten 24h">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblElectricitySales" text="3250">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="lblElectricityPurchaseTxt" prefHeight="40.0" prefWidth="200.0" text="Stromkosten letzten 24h">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblElectricityPurchase" text="3250">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                          <Label fx:id="lblOverallPerformanceTxt" prefHeight="40.0" prefWidth="200.0" text="aktuelle Gesamtleistung:">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                          <Label fx:id="lblOverallPerformance" text="3250">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                      </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                      <children>
+                          <Label fx:id="lblOverallConsumptionTxt" prefHeight="26.0" prefWidth="200.0" text="aktueller Verbrauch:">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                          <Label fx:id="lblOverallConsumption" text="1285">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                      </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                      <children>
+                          <Label fx:id="lblSystemCountTxt" prefWidth="210.0" text="Anzahl Solarsysteme: ">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                          <Label fx:id="lblSystemCount" text="4">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                      </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <children>
+                          <Label fx:id="lblMaximumPerformanceTxt" prefWidth="210.0" text="maximale Gesamtleistung:">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                          <Label fx:id="lblMaximumPerformance" text="3250">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                      </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3">
+                      <children>
+                          <Label fx:id="lblBatteryOverallCountTxt" prefWidth="180.0" text="Anzahl Speicher: ">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                          <Label fx:id="lblBatteryOverallCount" text="10">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                      </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                      <children>
+                          <Label fx:id="lblOverallCapacityTxt" prefWidth="180.0" text="Gesamtkapazität:">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                          <Label fx:id="lblOverallCapacity" text="3250">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                      </children>
+                  </HBox>
+                    <Button fx:id="btnManageSystems" mnemonicParsing="false" onAction="#switchToDetail" prefHeight="48.0" prefWidth="274.0" text="Solarsysteme Verwalten" GridPane.columnIndex="4">
+                        <styleClass>
+                            <String fx:value="btn" />
+                            <String fx:value="btn-primary" />
+                        </styleClass>
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Button>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                      <children>
+                          <Label fx:id="lblOverallChargeTxt" prefHeight="25.0" prefWidth="180.0" text="Gesamt Akkustand">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                          <Label fx:id="lblOverallCharge" text="3250">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </Label>
+                      </children>
+                  </HBox>
+         </children>
+      </GridPane>
+        <VBox alignment="CENTER" prefHeight="830.0" prefWidth="1390.0" spacing="20.0">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <children>
+
+                <HBox alignment="CENTER" spacing="25.0">
+                    <Button fx:id="lastDayButton" onAction="#filterLastDay" prefHeight="45.0" prefWidth="160.0" text="Letzte 24h">
+                  <styleClass>
+                     <String fx:value="btn" />
+                     <String fx:value="btn-default" />
+                  </styleClass></Button>
+               <Button fx:id="lastDayButton1" layoutX="507.0" layoutY="10.0" onAction="#filterLastTwoDays" prefHeight="45.0" prefWidth="160.0" text="Letzte 48h">
+                  <styleClass>
+                     <String fx:value="btn" />
+                     <String fx:value="btn-default" />
+                  </styleClass>
+               </Button>
+                    <Button fx:id="lastMonthButton" onAction="#filterLastMonth" prefHeight="45.0" prefWidth="160.0" text="Letzter Monat">
+                  <styleClass>
+                     <String fx:value="btn" />
+                     <String fx:value="btn-default" />
+                  </styleClass></Button>
+                    <Button fx:id="lastThreeMonthsButton" onAction="#filterLastThreeMonths" prefHeight="45.0" prefWidth="160.0" text="Letzte 3 Monate">
+                  <styleClass>
+                     <String fx:value="btn" />
+                     <String fx:value="btn-default" />
+                  </styleClass></Button>
+                    <Button fx:id="lastYearButton" onAction="#filterLastYear" prefHeight="45.0" prefWidth="160.0" text="Letztes Jahr">
+                  <styleClass>
+                     <String fx:value="btn" />
+                     <String fx:value="btn-default" />
+                  </styleClass></Button>
+                    <Button fx:id="lastFiveYearsButton" onAction="#filterLastFiveYears" prefHeight="45.0" prefWidth="160.0" text="Letzte 5 Jahre">
+                  <styleClass>
+                     <String fx:value="btn" />
+                     <String fx:value="btn-default" />
+                  </styleClass></Button>
+                    <Button fx:id="allButton" onAction="#filterAll" prefHeight="45.0" prefWidth="160.0" text="Alle">
+                  <styleClass>
+                     <String fx:value="btn" />
+                     <String fx:value="btn-default" />
+                  </styleClass></Button>
+                </HBox>
+
+                <AreaChart fx:id="productionChart" title="Solarproduktion vs. Verbrauch">
+                    <xAxis>
+                        <CategoryAxis fx:id="dateAxisProductionChart" label="Datum und Zeit" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="yAxisProductionChart" label="Wert" />
+                    </yAxis>
+                </AreaChart>
+            <BarChart fx:id="electricitySalesChart">
+              <xAxis>
+                <CategoryAxis fx:id="dateAxisElectricitySalesChart" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxisElectricitySalesChart" side="LEFT" />
+              </yAxis>
+            </BarChart>
+            </children>
+        </VBox>
+    </items>
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+</SplitPane>
